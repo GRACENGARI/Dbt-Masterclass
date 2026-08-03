@@ -1,0 +1,12 @@
+snapshots:
+  - name: users_snapshot
+    relation: source('thelook_commerce', 'users')
+    description: >
+      Tracks all status changes on users over time.
+    config:
+      schema: snapshots
+      unique_key: id
+      strategy: check
+      check_cols:
+        - street_address
+        - postal_code
