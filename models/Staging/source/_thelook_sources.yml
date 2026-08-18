@@ -5,3 +5,9 @@ sources:
     database: bigquery-public-data
     tables:
       - name: inventory_items
+      - name: orders
+      - name: order_items
+      - name: products
+      - name: users
+      - name: distribution_centers
+      - name: events

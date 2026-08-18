@@ -1,0 +1,1 @@
+select * from {{ source('thelook', 'distribution_centers') }
