@@ -1,1 +1,1 @@
-select * from {{ ref('int_order_joined) }}
+select * from {{ ref('int_order_items_enriched') }}
