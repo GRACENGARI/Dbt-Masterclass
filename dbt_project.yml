@@ -36,11 +36,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   dbt_masterclass_thelook:
-    staging:
+    Staging:
       +materialized: view
       +schema: staging
-    intermediate:
+    Intermediate:
       +materialized: view
       +schema: intermediate
-    mart:
+    Mart:
       +materialized: table
+      +schema: mart
