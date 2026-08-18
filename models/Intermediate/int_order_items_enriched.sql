@@ -1,4 +1,3 @@
-
 select
     oi.id as order_item_id,
     oi.order_id,
