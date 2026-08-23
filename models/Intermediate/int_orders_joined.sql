@@ -3,7 +3,7 @@ select
     oi.id as order_item_id,
     oi.order_id,
     oi.user_id,
-    oi.product_id,
+    oi.product_id,a
     oi.sale_price,
     p.cost,
     oi.sale_price - p.cost as gross_margin,
