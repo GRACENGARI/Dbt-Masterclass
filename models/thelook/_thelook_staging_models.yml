@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: stg_thelook_orders
+    description: Cleaned orders data from the TheLook dataset
+    columns:
+      - name: order_id
+        description: Unique identifier for each order
+        tests:
+          - not_null
+          - unique
+
+      - name: user_id
+        description: ID of the user who placed the order
+
+  - name: stg_thelook_users
+    description: Cleaned users data
+    columns:
+      - name: user_id
+        description: Unique identifier for each user
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_thelook_products
+    description: Cleaned products data
+    columns:
+      - name: id
+        description: Unique product identifier
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_thelook_order_items
+    description: Cleaned order items data
+    columns:
+      - name: id
+        description: Unique identifier for each order item
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_thelook_inventory_items
+    description: Cleaned inventory data
+    columns:
+      - name: id
+        description: Unique inventory item identifier
+
+  - name: stg_thelook_events
+    description: Cleaned events tracking data
+
+  - name: stg_thelook_distribution_centers
+    description: Distribution centers information
