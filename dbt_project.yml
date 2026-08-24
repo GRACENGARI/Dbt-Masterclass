@@ -45,3 +45,10 @@ models:
     Mart:
       +materialized: table
       +schema: mart
+seeds:
+  dbt_masterclass_thelook:
+  traffic_source_channel_mapping:
+   +column_types:
+      traffic_source: string
+      channel_group: string
+  +schema: seed
