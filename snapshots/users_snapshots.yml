@@ -1,0 +1,13 @@
+snapshots:
+  -name:users_snapshots
+  relation:source('raw','users')
+  description:>
+  Track all changes  of users over time
+
+config:
+schema:snapshots
+unique key:id
+strategy:check
+check_columns:
+  -street_adress
+  -portal_code
