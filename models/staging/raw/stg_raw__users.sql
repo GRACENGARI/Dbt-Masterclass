@@ -5,8 +5,11 @@ source as (
     select * from {{ source('raw', 'users') }}
 
 ),
+traffic_source as(
+    select * from {{ref ('traffic_source_channel')}}
+),
 
-renamed as (
+enriched as (
 
     select
         id,
@@ -22,12 +25,15 @@ renamed as (
         country,
         latitude,
         longitude,
-        traffic_source,
         created_at,
-        user_geom
+        user_geom,
+        channel_group,
+        tc.traffic_source
 
-    from source
+    from source as s
+    left join traffic_source as tc
+    on s.traffic_source = tc.traffic_source
 
 )
 
-select * from renamed
+select * from enriched
