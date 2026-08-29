@@ -1,6 +1,7 @@
 version: 2
+
 seeds:
-  - name: traffic_source_channel_mapping
+  - name: traffic_source_channel
     description: >
       Maps raw traffic_source values to broader paid/organic channel grouping
       for the seed.
